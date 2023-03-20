@@ -36,6 +36,7 @@
 		2739DA1729C863E700184C1E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA1429C863E700184C1E /* ProfileView.swift */; };
 		2739DA1829C863E700184C1E /* ProfilePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA1529C863E700184C1E /* ProfilePhoto.swift */; };
 		2739DA1929C863E700184C1E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA1629C863E700184C1E /* ProfileViewModel.swift */; };
+		2739DA1B29C8642700184C1E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA1A29C8642700184C1E /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		2739DA1429C863E700184C1E /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2739DA1529C863E700184C1E /* ProfilePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhoto.swift; sourceTree = "<group>"; };
 		2739DA1629C863E700184C1E /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		2739DA1A29C8642700184C1E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2739DA1329C863E700184C1E /* Profile */,
 				2739D9CE29C85D5500184C1E /* ContentView.swift */,
 				2739D9CC29C85D5500184C1E /* TradeByBataAppApp.swift */,
+				2739DA1A29C8642700184C1E /* Fonts.swift */,
 				2739D9D029C85D5600184C1E /* Assets.xcassets */,
 				2739D9D229C85D5600184C1E /* Preview Content */,
 			);
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2739DA1B29C8642700184C1E /* Fonts.swift in Sources */,
 				2739DA1229C863BE00184C1E /* NetworkManager.swift in Sources */,
 				2739D9CF29C85D5500184C1E /* ContentView.swift in Sources */,
 				2739DA1829C863E700184C1E /* ProfilePhoto.swift in Sources */,
