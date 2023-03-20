@@ -41,6 +41,7 @@
 		2739DA1F29C8646800184C1E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA1E29C8646800184C1E /* LoginView.swift */; };
 		2739DA2129C8647000184C1E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2029C8647000184C1E /* SignInView.swift */; };
 		2739DA2329C8648E00184C1E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2229C8648E00184C1E /* TabBarView.swift */; };
+		2739DA2629C864C200184C1E /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2739DA2529C864C200184C1E /* avatar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		2739DA1E29C8646800184C1E /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2739DA2029C8647000184C1E /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2739DA2229C8648E00184C1E /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		2739DA2529C864C200184C1E /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		2739D9CB29C85D5500184C1E /* TradeByBataApp */ = {
 			isa = PBXGroup;
 			children = (
+				2739DA2429C864AB00184C1E /* Mocks */,
 				2739DA0A29C8625300184C1E /* Model */,
 				2739DA0929C8616200184C1E /* Info.plist */,
 				2739DA1029C863BE00184C1E /* Services */,
@@ -199,6 +202,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		2739DA2429C864AB00184C1E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2739DA2529C864C200184C1E /* avatar.png */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +283,7 @@
 				2739DA0029C85E1300184C1E /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				2739D9FF29C85E1300184C1E /* Montserrat-SemiBold.ttf in Resources */,
 				2739D9FB29C85E1300184C1E /* Montserrat-Thin.ttf in Resources */,
+				2739DA2629C864C200184C1E /* avatar.png in Resources */,
 				2739D9FC29C85E1300184C1E /* Montserrat-Bold.ttf in Resources */,
 				2739DA0429C85E1300184C1E /* Montserrat-Italic.ttf in Resources */,
 				2739D9F629C85E1300184C1E /* Montserrat-Medium.ttf in Resources */,
