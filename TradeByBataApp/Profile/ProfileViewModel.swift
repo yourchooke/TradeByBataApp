@@ -10,7 +10,7 @@ import Foundation
 protocol ProfileViewModelProtocol {
     var fullName: String { get }
     var photo: Data? { get }
-    var balance: Double { get }
+    var balance: String { get }
     
     init(user: User)
 }
@@ -24,9 +24,9 @@ class ProfileViewModel: ProfileViewModelProtocol {
         NetworkManager.shared.fetchImageData(from: user.photoUrl)
     }
     
-    var balance: Double {
-        guard let balance = user.balance else { return 0 }
-        return balance
+    var balance: String {
+        guard let balance = user.balance else { return "0" }
+        return "$ \(balance)"
     }
     
     private let user: User

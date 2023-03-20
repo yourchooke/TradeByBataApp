@@ -10,12 +10,19 @@ import SwiftUI
 struct TabBarView: View {
     var body: some View {
         TabView {
+            
             ProfileView(viewModel: ProfileViewModel(user: User.getUsers()))
                 .tabItem {
                     Image(systemName: "person")
                 }    
-            
+            MockupDestinationView()
+                .tabItem {
+                    Image(systemName: "bubble.left")
+                }
         }
+            .background(.white)
+            .cornerRadius(30)
+            .ignoresSafeArea()
     }
 }
 
