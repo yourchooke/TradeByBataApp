@@ -31,6 +31,7 @@
 		2739DA0429C85E1300184C1E /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2739D9EE29C85E1300184C1E /* Montserrat-Italic.ttf */; };
 		2739DA0529C85E1300184C1E /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2739D9EF29C85E1300184C1E /* Montserrat-SemiBoldItalic.ttf */; };
 		2739DA0629C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2739D9F029C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf */; };
+		2739DA0C29C8625300184C1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA0B29C8625300184C1E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		2739D9EF29C85E1300184C1E /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2739D9F029C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		2739DA0929C8616200184C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2739DA0B29C8625300184C1E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		2739D9CB29C85D5500184C1E /* TradeByBataApp */ = {
 			isa = PBXGroup;
 			children = (
+				2739DA0A29C8625300184C1E /* Model */,
 				2739DA0929C8616200184C1E /* Info.plist */,
 				2739D9DA29C85E1300184C1E /* Fonts */,
 				2739D9CC29C85D5500184C1E /* TradeByBataAppApp.swift */,
@@ -143,6 +146,14 @@
 				2739D9F029C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf */,
 			);
 			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		2739DA0A29C8625300184C1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2739DA0B29C8625300184C1E /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 			files = (
 				2739D9CF29C85D5500184C1E /* ContentView.swift in Sources */,
 				2739D9CD29C85D5500184C1E /* TradeByBataAppApp.swift in Sources */,
+				2739DA0C29C8625300184C1E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
