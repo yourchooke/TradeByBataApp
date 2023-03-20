@@ -126,7 +126,6 @@
 				2739DA2229C8648E00184C1E /* TabBarView.swift */,
 				2739DA1E29C8646800184C1E /* LoginView.swift */,
 				2739DA1C29C8644800184C1E /* GrayTextField.swift */,
-				2739DA1A29C8642700184C1E /* Fonts.swift */,
 				2739D9D029C85D5600184C1E /* Assets.xcassets */,
 				2739D9D229C85D5600184C1E /* Preview Content */,
 			);
@@ -144,6 +143,7 @@
 		2739D9DA29C85E1300184C1E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2739DA1A29C8642700184C1E /* Fonts.swift */,
 				2739D9DB29C85E1300184C1E /* Montserrat */,
 			);
 			path = Fonts;
