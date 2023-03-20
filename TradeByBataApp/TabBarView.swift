@@ -13,7 +13,7 @@ struct TabBarView: View {
             ProfileView(viewModel: ProfileViewModel(user: User.getUsers()))
                 .tabItem {
                     Image(systemName: "person")
-                }
+                }    
             
         }
     }
