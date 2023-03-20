@@ -59,6 +59,7 @@
 		2739D9EE29C85E1300184C1E /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		2739D9EF29C85E1300184C1E /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2739D9F029C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		2739DA0929C8616200184C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 		2739D9CB29C85D5500184C1E /* TradeByBataApp */ = {
 			isa = PBXGroup;
 			children = (
+				2739DA0929C8616200184C1E /* Info.plist */,
 				2739D9DA29C85E1300184C1E /* Fonts */,
 				2739D9CC29C85D5500184C1E /* TradeByBataAppApp.swift */,
 				2739D9CE29C85D5500184C1E /* ContentView.swift */,
@@ -366,6 +368,7 @@
 				DEVELOPMENT_TEAM = R7N2GQJZB3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TradeByBataApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -395,6 +398,7 @@
 				DEVELOPMENT_TEAM = R7N2GQJZB3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TradeByBataApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
