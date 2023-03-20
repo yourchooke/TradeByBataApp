@@ -24,7 +24,7 @@ struct User: Decodable {
             firstName: "Sadhi",
             lastName: "Adhi Pradana",
             email: "sadhi@mail.ru",
-            photoUrl: "https://github.com/yourchooke/TradeByBata/blob/main/Mocks/avatar.png?raw=true",
+            photoUrl: "https://github.com/yourchooke/TradeByBataApp/blob/main/TradeByBataApp/Mocks/avatar.png?raw=true",
             password: "123",
             balance: 1593
         )
