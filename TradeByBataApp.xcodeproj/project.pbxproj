@@ -43,6 +43,7 @@
 		2739DA2329C8648E00184C1E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2229C8648E00184C1E /* TabBarView.swift */; };
 		2739DA2629C864C200184C1E /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2739DA2529C864C200184C1E /* avatar.png */; };
 		2739DA2829C883AD00184C1E /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2729C883AD00184C1E /* RowView.swift */; };
+		2739DA2A29C898C600184C1E /* MockupDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2929C898C600184C1E /* MockupDestinationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		2739DA2229C8648E00184C1E /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		2739DA2529C864C200184C1E /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		2739DA2729C883AD00184C1E /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		2739DA2929C898C600184C1E /* MockupDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupDestinationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				2739DA2229C8648E00184C1E /* TabBarView.swift */,
 				2739DA1E29C8646800184C1E /* LoginView.swift */,
 				2739DA1C29C8644800184C1E /* GrayTextField.swift */,
+				2739DA2929C898C600184C1E /* MockupDestinationView.swift */,
 				2739D9D029C85D5600184C1E /* Assets.xcassets */,
 				2739D9D229C85D5600184C1E /* Preview Content */,
 			);
@@ -308,6 +311,7 @@
 				2739DA2829C883AD00184C1E /* RowView.swift in Sources */,
 				2739DA1229C863BE00184C1E /* NetworkManager.swift in Sources */,
 				2739D9CF29C85D5500184C1E /* ContentView.swift in Sources */,
+				2739DA2A29C898C600184C1E /* MockupDestinationView.swift in Sources */,
 				2739DA1829C863E700184C1E /* ProfilePhoto.swift in Sources */,
 				2739DA1729C863E700184C1E /* ProfileView.swift in Sources */,
 				2739D9CD29C85D5500184C1E /* TradeByBataAppApp.swift in Sources */,

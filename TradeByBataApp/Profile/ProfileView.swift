@@ -35,6 +35,8 @@ struct ProfileView: View {
                     .buttonStyle(.borderedProminent)
                     .tint(Color(red: 0.306, green: 0.333, blue: 0.843))
                     .padding(.init(top: 35, leading: 40, bottom: 0, trailing: 40))
+                
+                
             }
             
         } .font(AppFont().body)
