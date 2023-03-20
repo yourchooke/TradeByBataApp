@@ -31,8 +31,6 @@
 		2739DA0429C85E1300184C1E /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2739D9EE29C85E1300184C1E /* Montserrat-Italic.ttf */; };
 		2739DA0529C85E1300184C1E /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2739D9EF29C85E1300184C1E /* Montserrat-SemiBoldItalic.ttf */; };
 		2739DA0629C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2739D9F029C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf */; };
-		2739DA0729C85E1300184C1E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2739D9F129C85E1300184C1E /* OFL.txt */; };
-		2739DA0829C85E1300184C1E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2739D9F229C85E1300184C1E /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +59,6 @@
 		2739D9EE29C85E1300184C1E /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		2739D9EF29C85E1300184C1E /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2739D9F029C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		2739D9F129C85E1300184C1E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
-		2739D9F229C85E1300184C1E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +139,6 @@
 				2739D9EE29C85E1300184C1E /* Montserrat-Italic.ttf */,
 				2739D9EF29C85E1300184C1E /* Montserrat-SemiBoldItalic.ttf */,
 				2739D9F029C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf */,
-				2739D9F129C85E1300184C1E /* OFL.txt */,
-				2739D9F229C85E1300184C1E /* README.txt */,
 			);
 			path = Montserrat;
 			sourceTree = "<group>";
@@ -219,7 +213,6 @@
 				2739D9F829C85E1300184C1E /* Montserrat-Light.ttf in Resources */,
 				2739D9F929C85E1300184C1E /* Montserrat-ThinItalic.ttf in Resources */,
 				2739D9F529C85E1300184C1E /* Montserrat-LightItalic.ttf in Resources */,
-				2739DA0729C85E1300184C1E /* OFL.txt in Resources */,
 				2739DA0029C85E1300184C1E /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				2739D9FF29C85E1300184C1E /* Montserrat-SemiBold.ttf in Resources */,
 				2739D9FB29C85E1300184C1E /* Montserrat-Thin.ttf in Resources */,
@@ -229,7 +222,6 @@
 				2739D9D129C85D5600184C1E /* Assets.xcassets in Resources */,
 				2739D9FA29C85E1300184C1E /* Montserrat-ExtraLight.ttf in Resources */,
 				2739DA0229C85E1300184C1E /* Montserrat-Black.ttf in Resources */,
-				2739DA0829C85E1300184C1E /* README.txt in Resources */,
 				2739DA0629C85E1300184C1E /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
