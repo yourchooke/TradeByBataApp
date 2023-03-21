@@ -11,14 +11,27 @@ struct TabBarView: View {
     var body: some View {
         TabView {
             
-            ProfileView(viewModel: ProfileViewModel(user: User.getUsers()))
+            MockupDestinationView()
                 .tabItem {
-                    Image(systemName: "person")
-                }    
+                    Image(systemName: "house")
+                }
+            MockupDestinationView()
+                .tabItem {
+                    Image(systemName: "heart")
+                }
+            MockupDestinationView()
+                .tabItem {
+                    Image(systemName: "cart")
+                }
             MockupDestinationView()
                 .tabItem {
                     Image(systemName: "bubble.left")
                 }
+            ProfileView(viewModel: ProfileViewModel(user: User.getUsers()))
+                .tabItem {
+                    Image(systemName: "person")
+                }    
+
         }
             .background(.white)
             .cornerRadius(30)
