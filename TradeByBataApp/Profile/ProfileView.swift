@@ -51,14 +51,13 @@ struct ProfileView: View {
                             value: nil
                         )
                     }
-                    NavigationLink(destination: MockupDestinationView()) {
                         RowView(
                             viewModel: viewModel,
                             imageName: "menubar.rectangle",
                             text: "Balance",
                             value: viewModel.balance
                         )
-                    }
+                    
                     NavigationLink(destination: MockupDestinationView()) {
                         RowView(
                             viewModel: viewModel,

@@ -17,7 +17,7 @@ struct RowView: View {
         HStack{
             Image(systemName: imageName)
                 .scaleEffect(1.4)
-                .frame(width: 50, height: 50)
+                .frame(width: 40, height: 40)
                 .background(Color(red: 0.933, green: 0.937, blue: 0.957))
                 .clipShape(Circle())
             Text(text)
@@ -26,6 +26,7 @@ struct RowView: View {
                 Text(value)
             }
         }
+            .frame(height: 20)
             .font(AppFont().body)
     }
 }
