@@ -45,6 +45,7 @@
 		2739DA2829C883AD00184C1E /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2729C883AD00184C1E /* RowView.swift */; };
 		2739DA2A29C898C600184C1E /* MockupDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2929C898C600184C1E /* MockupDestinationView.swift */; };
 		27BD7A5929C9607700271EBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A5829C9607700271EBC /* HomeView.swift */; };
+		27BD7A5E29C9B4DF00271EBC /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A5D29C9B4DF00271EBC /* Goods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		2739DA2729C883AD00184C1E /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		2739DA2929C898C600184C1E /* MockupDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupDestinationView.swift; sourceTree = "<group>"; };
 		27BD7A5829C9607700271EBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		27BD7A5D29C9B4DF00271EBC /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				2739DA0B29C8625300184C1E /* User.swift */,
+				27BD7A5D29C9B4DF00271EBC /* Goods.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			files = (
 				2739DA1B29C8642700184C1E /* Fonts.swift in Sources */,
 				2739DA2829C883AD00184C1E /* RowView.swift in Sources */,
+				27BD7A5E29C9B4DF00271EBC /* Goods.swift in Sources */,
 				2739DA1229C863BE00184C1E /* NetworkManager.swift in Sources */,
 				27BD7A5929C9607700271EBC /* HomeView.swift in Sources */,
 				2739D9CF29C85D5500184C1E /* ContentView.swift in Sources */,
@@ -465,7 +469,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TradeByBataApp/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -495,7 +498,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TradeByBataApp/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
