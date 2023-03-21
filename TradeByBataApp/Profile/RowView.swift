@@ -26,7 +26,7 @@ struct RowView: View {
                 Text(value)
             }
         }
-            .frame(height: 20)
+            .frame(height: 37)
             .font(AppFont().body)
     }
 }

@@ -50,7 +50,7 @@ struct ProfileView: View {
                             text: "Payment method",
                             value: nil
                         )
-                    }
+                    }.listRowSeparatorTint(.white)
                         RowView(
                             viewModel: viewModel,
                             imageName: "menubar.rectangle",
@@ -65,7 +65,7 @@ struct ProfileView: View {
                             text: "Trade history",
                             value: nil
                         )
-                    }
+                    }.listRowSeparatorTint(.white)
                     NavigationLink(destination: MockupDestinationView()) {
                         RowView(
                             viewModel: viewModel,
@@ -73,7 +73,7 @@ struct ProfileView: View {
                             text: "Restore purchase",
                             value: nil
                         )
-                    }
+                    }.listRowSeparatorTint(.white)
                     NavigationLink(destination: MockupDestinationView()) {
                         RowView(
                             viewModel: viewModel,
@@ -81,7 +81,7 @@ struct ProfileView: View {
                             text: "Help",
                             value: nil
                         )
-                    }
+                    }.listRowSeparatorTint(.white)
                     NavigationLink(destination: LoginView()) {
                         RowView(
                             viewModel: viewModel,
@@ -89,8 +89,9 @@ struct ProfileView: View {
                             text: "Log out",
                             value: nil
                         )
-                    }
+                    }.listRowSeparatorTint(.white)
                 }.listStyle(.plain)
+                    
             }
             
          .font(AppFont().body)
