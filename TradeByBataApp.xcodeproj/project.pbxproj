@@ -44,6 +44,7 @@
 		2739DA2629C864C200184C1E /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2739DA2529C864C200184C1E /* avatar.png */; };
 		2739DA2829C883AD00184C1E /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2729C883AD00184C1E /* RowView.swift */; };
 		2739DA2A29C898C600184C1E /* MockupDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739DA2929C898C600184C1E /* MockupDestinationView.swift */; };
+		27BD7A5929C9607700271EBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A5829C9607700271EBC /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		2739DA2529C864C200184C1E /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		2739DA2729C883AD00184C1E /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		2739DA2929C898C600184C1E /* MockupDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupDestinationView.swift; sourceTree = "<group>"; };
+		27BD7A5829C9607700271EBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				2739D9DA29C85E1300184C1E /* Fonts */,
 				2739DA1329C863E700184C1E /* Profile */,
 				2739D9CE29C85D5500184C1E /* ContentView.swift */,
+				27BD7A5A29C9608F00271EBC /* Home */,
 				2739DA2029C8647000184C1E /* SignInView.swift */,
 				2739D9CC29C85D5500184C1E /* TradeByBataAppApp.swift */,
 				2739DA2229C8648E00184C1E /* TabBarView.swift */,
@@ -214,6 +217,14 @@
 				2739DA2529C864C200184C1E /* avatar.png */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		27BD7A5A29C9608F00271EBC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				27BD7A5829C9607700271EBC /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 				2739DA1B29C8642700184C1E /* Fonts.swift in Sources */,
 				2739DA2829C883AD00184C1E /* RowView.swift in Sources */,
 				2739DA1229C863BE00184C1E /* NetworkManager.swift in Sources */,
+				27BD7A5929C9607700271EBC /* HomeView.swift in Sources */,
 				2739D9CF29C85D5500184C1E /* ContentView.swift in Sources */,
 				2739DA2A29C898C600184C1E /* MockupDestinationView.swift in Sources */,
 				2739DA1829C863E700184C1E /* ProfilePhoto.swift in Sources */,
