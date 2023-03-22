@@ -8,5 +8,6 @@
 import Foundation
 
 protocol HomeViewModelProtocol {
-    var latest: [Latest] { get }
+    var latest: Latest { get }
+    var flashSale: FlashSale { get }
 }
