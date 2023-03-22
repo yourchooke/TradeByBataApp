@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        HStack{
+            LatestCard(
+                category: "Games",
+                name: "Civilization",
+                price: 30.3,
+                imageData: nil
+            )
+        }
             .task {
                 await NetworkManager.shared.fetchData(for: .flashSale)
             }

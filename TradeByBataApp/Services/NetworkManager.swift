@@ -35,8 +35,6 @@ class NetworkManager {
                     goods.append(good)
                     print(" \(good) ")
                 }
-       //         print(decoderResponse)
-        //        print(decoderResponse.flashSale.first)
             } else {
                 let decoderResponse = try decoder.decode(Latest.self, from: data)
                 print(decoderResponse)
