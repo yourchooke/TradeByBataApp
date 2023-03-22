@@ -12,17 +12,21 @@ struct HomeView: View {
     
     var body: some View {
         
-        HStack{
-            LatestCard(
-                category: "Games",
-                name: "Civilization",
-                price: 30.3,
-                imageData: nil
-            )
-        }
-            .task {
-                await NetworkManager.shared.fetchData(for: .flashSale)
+        ScrollView {
+            HStack{
+                ForEach(0..<10) {_ in
+                    LatestCard(
+                        category: "Games",
+                        name: "Civilization",
+                        price: 30.3,
+                        imageData: nil
+                    )
+                }
             }
+                .task {
+                    await NetworkManager.shared.fetchData(for: .flashSale)
+            }
+        }
     }
 }
 
