@@ -11,9 +11,14 @@ struct Latest: Codable {
     let latest: [Good]
 }
 
+struct FlashSale: Codable {
+    let flashSale: [Good]
+}
+
 struct Good: Codable {
     let category: String
     let name: String
-    let price: Int
-    let image_url: String
+    let price: Double
+    let discount: Double?
+    let imageUrl: String
 }

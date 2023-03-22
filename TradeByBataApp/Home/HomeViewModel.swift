@@ -7,3 +7,6 @@
 
 import Foundation
 
+protocol HomeViewModelProtocol {
+    var latest: [Latest] { get }
+}
