@@ -20,7 +20,7 @@ struct HomeView: View {
                                 category: good.category,
                                 name: good.name,
                                 price: good.price,
-                                imageData: nil
+                                imageData: viewModel.fetchImageData(for: good)
                             )
                         }
                     }

@@ -20,6 +20,8 @@ struct LatestCard: View {
                 .cornerRadius(10)
                 .foregroundColor(.gray)
             getImage(from: imageData)
+                .resizable()
+                .frame(width: 115, height: 150)
             VStack{
                 HStack{
                     ZStack {
@@ -71,7 +73,7 @@ struct LatestCard_Previews: PreviewProvider {
                 category: "Games",
                 name: "Civilization",
                 price: 30.3,
-                imageData: nil)
+                imageData: NetworkManager.shared.fetchImageData(from: "https://avatars.mds.yandex.net/get-mpic/6251774/img_id4273297770790914968.jpeg/orig"))
                 
         }
     }

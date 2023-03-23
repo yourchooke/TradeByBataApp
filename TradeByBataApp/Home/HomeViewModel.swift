@@ -24,5 +24,7 @@ class HomeViewModel: HomeViewModelProtocol, ObservableObject {
         print(latest?.first?.category ?? " oops! ")
     }
     
-
+    func fetchImageData(for good: Good) -> Data? {
+        NetworkManager.shared.fetchImageData(from: good.imageUrl)
+    }
 }
