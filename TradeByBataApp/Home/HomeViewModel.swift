@@ -7,7 +7,22 @@
 
 import Foundation
 
-protocol HomeViewModelProtocol {
-    var latest: Latest { get }
-    var flashSale: FlashSale { get }
+protocol HomeViewModelProtocol: ObservableObject {
+    var latest: [Good]? { get }
+    var flashSale: [Good]? { get }
+}
+
+
+class HomeViewModel: HomeViewModelProtocol, ObservableObject {
+    
+    @Published var latest: [Good]?
+    @Published var flashSale: [Good]?
+    
+    func fetchData() async {
+      self.latest = nil
+      self.latest = try? await NetworkManager.shared.fetchData(for: .latest)
+        print(latest?.first?.category ?? " oops! ")
+    }
+    
+
 }

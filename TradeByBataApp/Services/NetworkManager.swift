@@ -20,29 +20,27 @@ class NetworkManager {
         return imageData
     }
     
-    func fetchData(for kind: KindOfGoods) async -> Void {
+    func fetchData(for kind: KindOfGoods) async throws -> [Good] {
         
-        guard let url = URL(string: kind.rawValue) else { return }
+        guard let url = URL(string: kind.rawValue) else { return [] }
+        
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             if kind == .flashSale {
-                var goods: [Good] = []
                 let decoderResponse = try decoder.decode(FlashSale.self, from: data)
-                for good in decoderResponse.flashSale {
-                    goods.append(good)
-                    print(" \(good) ")
-                }
+                return decoderResponse.flashSale
             } else {
                 let decoderResponse = try decoder.decode(Latest.self, from: data)
-                print(decoderResponse)
+                return decoderResponse.latest
             }
             
         } catch {
             print("data isn't valid")
         }
+        return []
     }
 
     

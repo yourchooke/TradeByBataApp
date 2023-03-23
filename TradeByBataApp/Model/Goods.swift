@@ -8,14 +8,14 @@
 import Foundation
 
 struct Latest: Codable {
-    let latest: [Good]
+    var latest: [Good]
 }
 
 struct FlashSale: Codable {
-    let flashSale: [Good]
+    var flashSale: [Good]
 }
 
-struct Good: Codable {
+struct Good: Codable, Hashable {
     let category: String
     let name: String
     let price: Double

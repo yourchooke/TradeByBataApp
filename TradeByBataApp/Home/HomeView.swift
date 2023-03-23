@@ -8,30 +8,40 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
-        
-        ScrollView {
-            HStack{
-                ForEach(0..<10) {_ in
-                    LatestCard(
-                        category: "Games",
-                        name: "Civilization",
-                        price: 30.3,
-                        imageData: nil
-                    )
-                }
+        VStack{
+            if viewModel.latest != nil{
+                
+                Text(viewModel.latest?.first?.category ?? " ")
+                
+                
+                ScrollView {
+//                    HStack{
+//                        ForEach($viewModel.latest, id: \.self) {good in
+//                            LatestCard(
+//                                category: good.category,
+//                                name: good.name,
+//                                price: good.price,
+//                                imageData: nil
+//                            )
+//                        }
+//                    }
+//                }
+                
+            } else {
+                Text("Loading...")
             }
-                .task {
-                    await NetworkManager.shared.fetchData(for: .flashSale)
-            }
+        }.task {
+            await viewModel.fetchData()
+            print("await fetch data")
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: HomeViewModel.init())
     }
 }
