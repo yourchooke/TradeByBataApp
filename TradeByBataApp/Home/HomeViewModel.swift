@@ -19,9 +19,12 @@ class HomeViewModel: HomeViewModelProtocol, ObservableObject {
     @Published var flashSale: [Good]?
     
     func fetchData() async {
-      self.latest = nil
-      self.latest = try? await NetworkManager.shared.fetchData(for: .latest)
-        print(latest?.first?.category ?? " oops! ")
+        self.latest = nil
+        self.latest = try? await NetworkManager.shared.fetchData(for: .latest)
+        
+        self.flashSale = nil
+        self.flashSale = try? await NetworkManager.shared.fetchData(for: .flashSale)
+        
     }
     
     func fetchImageData(for good: Good) -> Data? {

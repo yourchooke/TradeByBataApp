@@ -29,6 +29,24 @@ struct HomeView: View {
             } else {
                 Text("Loading...")
             }
+            
+            if let flashSaleArray = viewModel.flashSale {
+                ScrollView {
+                    HStack{
+                        ForEach(flashSaleArray, id: \.name) {good in
+                            LatestCard(
+                                category: good.category,
+                                name: good.name,
+                                price: good.price,
+                                imageData: viewModel.fetchImageData(for: good)
+                            )
+                        }
+                    }
+                }
+                
+            } else {
+                Text("Loading...")
+            }
         }.task {
             await viewModel.fetchData()
             print("await fetch data")
