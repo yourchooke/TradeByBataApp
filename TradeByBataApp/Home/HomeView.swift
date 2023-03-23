@@ -17,7 +17,7 @@ struct HomeView: View {
                 Text(viewModel.latest?.first?.category ?? " ")
                 
                 
-                ScrollView {
+//                ScrollView {
 //                    HStack{
 //                        ForEach($viewModel.latest, id: \.self) {good in
 //                            LatestCard(
