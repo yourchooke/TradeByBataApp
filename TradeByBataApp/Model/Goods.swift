@@ -16,9 +16,9 @@ struct FlashSale: Codable {
 }
 
 struct Good: Codable, Hashable {
-    let category: String
-    let name: String
-    let price: Double
-    let discount: Double?
-    let imageUrl: String
+    var category: String
+    var name: String
+    var price: Double
+    var discount: Double?
+    var imageUrl: String
 }

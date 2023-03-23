@@ -12,23 +12,19 @@ struct HomeView: View {
     
     var body: some View {
         VStack{
-            if viewModel.latest != nil{
-                
-                Text(viewModel.latest?.first?.category ?? " ")
-                
-                
-//                ScrollView {
-//                    HStack{
-//                        ForEach($viewModel.latest, id: \.self) {good in
-//                            LatestCard(
-//                                category: good.category,
-//                                name: good.name,
-//                                price: good.price,
-//                                imageData: nil
-//                            )
-//                        }
-//                    }
-//                }
+            if let latestArray = viewModel.latest {
+                ScrollView {
+                    HStack{      
+                        ForEach(latestArray, id: \.name) {good in
+                            LatestCard(
+                                category: good.category,
+                                name: good.name,
+                                price: good.price,
+                                imageData: nil
+                            )
+                        }
+                    }
+                }
                 
             } else {
                 Text("Loading...")
