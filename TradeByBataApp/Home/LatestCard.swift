@@ -12,17 +12,21 @@ struct LatestCard: View {
     let name: String
     let price: Double
     let imageURL: String
+    let width = CGFloat(115)
+    let height = CGFloat(150)
+    let cornerRadius = CGFloat(20)
     
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(width: 115, height: 150)
-                .cornerRadius(10)
+                .frame(width: width, height: height)
+                .cornerRadius(cornerRadius)
                 .foregroundColor(.gray)
             AsyncImage(url: URL(string: imageURL)) { image in
                 image
                     .resizable()
-                    .frame(width: 115, height: 150)
+                    .frame(width: width, height: height)
+                    .cornerRadius(cornerRadius)
             } placeholder: {
                 Image(systemName: "xmark.shield")
             }
@@ -58,7 +62,7 @@ struct LatestCard: View {
                 }
                 
 
-            } .frame(width: 110, height: 150)
+            } .frame(width: width - 10, height: height - 10)
            
         }
         
