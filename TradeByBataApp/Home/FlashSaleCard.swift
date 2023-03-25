@@ -45,26 +45,38 @@ struct FlashSaleCard: View {
                         Spacer()
                     }
                     
-                    .padding(.init(.init(top: 130, leading: 0, bottom: 0, trailing: 0)))
+                    .padding(.init(.init(top: 120, leading: 0, bottom: 0, trailing: 0)))
                     HStack {
                         Text(name)
                             .foregroundColor(.white)
                             .bold()
                         Spacer()
-                    } .padding(.init(.init(top: 0, leading: 0, bottom: 1, trailing: 0)))
+                    } .padding(.init(.init(top: 0, leading: 0, bottom: 0, trailing: 0)))
+                    
                     HStack {
                         Text("$ \(String(format: "%.3f", price))")
                             .fontSize(size: 12)
                             .foregroundColor(.white)
                         Spacer()
+                        
                         Button(action: {}) {
                             Image(systemName: "heart.circle.fill")
+                                .resizable()
+                                .frame(width: 30.0, height: 30.0)
                                 .foregroundColor(Color(UIColor(red: 0.898, green: 0.914, blue: 0.937, alpha: 0.85)))
-                        }
+                        } .scaledToFit()
+                        
                         Button(action: {}) {
                             Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .frame(width: 30.0, height: 30.0)
                                 .foregroundColor(Color(UIColor(red: 0.898, green: 0.914, blue: 0.937, alpha: 0.85)))
+                                
+                             
                         }
+                        
+                            
+                        
                     }
                     
 

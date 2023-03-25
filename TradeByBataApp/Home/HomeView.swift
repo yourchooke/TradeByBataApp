@@ -34,10 +34,11 @@ struct HomeView: View {
                 ScrollView {
                     HStack{
                         ForEach(flashSaleArray, id: \.name) {good in
-                            LatestCard(
+                            FlashSaleCard(
                                 category: good.category,
                                 name: good.name,
                                 price: good.price,
+                                discount: good.discount ?? 0,
                                 imageURL: good.imageUrl
                             )
                         }
