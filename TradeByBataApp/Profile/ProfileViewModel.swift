@@ -9,7 +9,7 @@ import Foundation
 
 protocol ProfileViewModelProtocol {
     var fullName: String { get }
-    var photo: Data? { get }
+    var photoURL: String { get }
     var balance: String { get }
     
     init(user: User)
@@ -20,8 +20,8 @@ class ProfileViewModel: ProfileViewModelProtocol {
         "\(user.firstName) \(user.lastName)"
     }
     
-    var photo: Data? {
-        NetworkManager.shared.fetchImageData(from: user.photoUrl)
+    var photoURL: String {
+        user.photoUrl
     }
     
     var balance: String {

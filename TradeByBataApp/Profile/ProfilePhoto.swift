@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct ProfilePhoto: View {
-    let imageData: Data?
+    let imageURL: String
     let imageSize: CGSize
 
     var body: some View {
-        getImage(from: imageData)
-            .resizable()
-            .frame(width: imageSize.width, height: imageSize.height)
-            .background(.cyan)
-            .clipShape(Circle())
+        
+        AsyncImage(url: URL(string: imageURL)) { image in
+            image
+                .resizable()
+                .frame(width: imageSize.width, height: imageSize.height)
+                
+        } placeholder: {
+            Image(systemName: "xmark.shield")
+        }
+
             
                     
     }
@@ -30,6 +35,6 @@ struct ProfilePhoto: View {
 
 struct ProfilePhoto_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePhoto(imageData: nil, imageSize: CGSize(width: 100, height: 100))
+        ProfilePhoto(imageURL: User.getUsers().photoUrl, imageSize: CGSize(width: 100, height: 100))
     }
 }

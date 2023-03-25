@@ -14,11 +14,11 @@ class NetworkManager {
     private init() {}
     
     
-    func fetchImageData(from url: String) -> Data? {
-        guard let imageURL = URL(string: url) else { return nil }
-        guard let imageData = try? Data(contentsOf: imageURL) else { return nil }
-        return imageData
-    }
+//    func fetchImageData(from url: String) -> Data? {
+//        guard let imageURL = URL(string: url) else { return nil }
+//        guard let imageData = try? Data(contentsOf: imageURL) else { return nil }
+//        return imageData
+//    }
     
     func fetchData(for kind: KindOfGoods) async throws -> [Good] {
         

@@ -14,7 +14,7 @@ struct ProfileView: View {
             VStack{
                 Text("Profile")
                     .fontWeight(.semibold)
-                ProfilePhoto(imageData: viewModel.photo, imageSize: CGSize(width: 50, height: 50))
+                ProfilePhoto(imageURL: viewModel.photoURL, imageSize: CGSize(width: 50, height: 50))
                 Button(action: {}) {
                     Text("Change photo")
                         .font(AppFont().footnote)

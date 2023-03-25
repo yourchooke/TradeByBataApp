@@ -26,8 +26,4 @@ class HomeViewModel: HomeViewModelProtocol, ObservableObject {
         self.flashSale = try? await NetworkManager.shared.fetchData(for: .flashSale)
         
     }
-    
-    func fetchImageData(for good: Good) -> Data? {
-        NetworkManager.shared.fetchImageData(from: good.imageUrl)
-    }
 }

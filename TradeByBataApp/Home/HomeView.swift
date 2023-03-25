@@ -20,7 +20,7 @@ struct HomeView: View {
                                 category: good.category,
                                 name: good.name,
                                 price: good.price,
-                                imageData: viewModel.fetchImageData(for: good)
+                                imageURL: good.imageUrl
                             )
                         }
                     }
@@ -38,7 +38,7 @@ struct HomeView: View {
                                 category: good.category,
                                 name: good.name,
                                 price: good.price,
-                                imageData: viewModel.fetchImageData(for: good)
+                                imageURL: good.imageUrl
                             )
                         }
                     }
