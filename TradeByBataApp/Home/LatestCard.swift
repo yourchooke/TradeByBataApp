@@ -25,6 +25,7 @@ struct LatestCard: View {
             AsyncImage(url: URL(string: imageURL)) { image in
                 image
                     .resizable()
+                    .scaledToFill()
                     .frame(width: width, height: height)
                     .cornerRadius(cornerRadius)
             } placeholder: {

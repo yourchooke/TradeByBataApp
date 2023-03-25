@@ -19,6 +19,6 @@ struct Good: Codable, Hashable {
     var category: String
     var name: String
     var price: Double
-    var discount: Double?
+    var discount: Int?
     var imageUrl: String
 }

@@ -11,7 +11,7 @@ struct FlashSaleCard: View {
     let category: String
     let name: String
     let price: Double
-    let discount: Double
+    let discount: Int
     let imageURL: String
     let width = CGFloat(174)
     let height = CGFloat(221)
@@ -27,6 +27,7 @@ struct FlashSaleCard: View {
                 AsyncImage(url: URL(string: imageURL)) { image in
                     image
                         .resizable()
+                        .scaledToFill()
                         .frame(width: width, height: height)
                         .cornerRadius(cornerRadius)
                 } placeholder: {
@@ -34,6 +35,22 @@ struct FlashSaleCard: View {
                 }
 
                 VStack{
+                    HStack {
+                        ProfilePhoto(
+                        imageURL: nil,
+                        imageSize: CGSize(width: 20, height: 20)
+                        )
+                        Spacer()
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(Color(UIColor(red: 0.976, green: 0.227, blue: 0.227, alpha: 1)))
+                            Text("\(discount)% off ")
+                                .bold()
+                                .fontSize(size: 10)
+                        } .frame(width: 50, height: 20)
+                    } .padding(.init(.init(top: 15, leading: 10, bottom: 0, trailing: 10)))
+                    
+                    
                     HStack{
                         ZStack {
                             RoundedRectangle(cornerRadius: 20)
@@ -43,15 +60,14 @@ struct FlashSaleCard: View {
                                 .fontSize(size: 10)
                         } .frame(width: 50, height: 20)
                         Spacer()
-                    }
+                    }.padding(.init(.init(top: 90, leading: 10, bottom: 0, trailing: 10)))
                     
-                    .padding(.init(.init(top: 120, leading: 0, bottom: 0, trailing: 0)))
                     HStack {
                         Text(name)
                             .foregroundColor(.white)
                             .bold()
                         Spacer()
-                    } .padding(.init(.init(top: 0, leading: 0, bottom: 0, trailing: 0)))
+                    } .padding(.init(.init(top: 0, leading: 10, bottom: 0, trailing: 10)))
                     
                     HStack {
                         Text("$ \(String(format: "%.3f", price))")
@@ -62,25 +78,19 @@ struct FlashSaleCard: View {
                         Button(action: {}) {
                             Image(systemName: "heart.circle.fill")
                                 .resizable()
-                                .frame(width: 30.0, height: 30.0)
+                                .frame(width: 27.0, height: 27.0)
                                 .foregroundColor(Color(UIColor(red: 0.898, green: 0.914, blue: 0.937, alpha: 0.85)))
-                        } .scaledToFit()
-                        
+                        }
                         Button(action: {}) {
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
-                                .frame(width: 30.0, height: 30.0)
+                                .frame(width: 33.0, height: 33.0)
                                 .foregroundColor(Color(UIColor(red: 0.898, green: 0.914, blue: 0.937, alpha: 0.85)))
-                                
-                             
                         }
-                        
-                            
-                        
-                    }
+                    }  .padding(.init(.init(top: 0, leading: 10, bottom: 15, trailing: 10)))
                     
 
-                } .frame(width: width - 10, height: height - 10)
+                } .frame(width: width, height: height)
                
             }
     }
@@ -93,7 +103,7 @@ struct FlashSaleCard_Previews: PreviewProvider {
             name: "Reebok Classic",
             price: 24,
             discount: 30,
-            imageURL: "https://img1.goodfon.ru/wallpaper/nbig/a/69/kartinka-3d-dikaya-koshka.jpg"
+            imageURL: "https://www.tradeinn.com/f/13754/137546 834/microsoft-xbox-xbox-one-s-1tb-console-additional-controller.jpg"
         )
     }
 }

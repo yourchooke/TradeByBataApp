@@ -11,6 +11,8 @@ struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
+        
+        
         VStack{
             if let latestArray = viewModel.latest {
                 ScrollView {

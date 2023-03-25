@@ -8,33 +8,31 @@
 import SwiftUI
 
 struct ProfilePhoto: View {
-    let imageURL: String
+    let imageURL: String?
     let imageSize: CGSize
 
     var body: some View {
         
-        AsyncImage(url: URL(string: imageURL)) { image in
+        AsyncImage(url: URL(string: imageURL ?? "")) { image in
             image
                 .resizable()
                 .frame(width: imageSize.width, height: imageSize.height)
                 
         } placeholder: {
-            Image(systemName: "xmark.shield")
+            ZStack {
+                Circle()
+                    .foregroundColor(.yellow)
+                Image(systemName: "person")
+                    .resizable()
+                    .scaledToFit()
+                    .scaleEffect(0.7)
+            }.frame(width: imageSize.width, height: imageSize.height)
         }
-
-            
-                    
-    }
-    
-    private func getImage(from data: Data?) -> Image {
-        guard let data = data else { return Image(systemName: "xmark.shield")}
-        guard let image = UIImage(data: data) else { return Image(systemName: "xmark.shield")}
-        return Image(uiImage: image)
     }
 }
 
 struct ProfilePhoto_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePhoto(imageURL: User.getUsers().photoUrl, imageSize: CGSize(width: 100, height: 100))
+        ProfilePhoto(imageURL: nil, imageSize: CGSize(width: 100, height: 100))
     }
 }
