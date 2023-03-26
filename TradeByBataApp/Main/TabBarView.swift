@@ -36,7 +36,7 @@ struct TabBarView: View {
             .background(.white)
             .cornerRadius(30)
             .ignoresSafeArea()
-    }
+    } 
 }
 
 struct TabBarView_Previews: PreviewProvider {
