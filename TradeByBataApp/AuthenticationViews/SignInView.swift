@@ -11,7 +11,7 @@ struct SignInView: View {
     @State private var name = ""
     @State private var lastName = ""
     @State private var email = ""
-    
+        
     var body: some View {
         NavigationView {
             VStack{
@@ -26,7 +26,7 @@ struct SignInView: View {
                 GrayTextField(title: "Email", text: $email)
                     .padding(.init(top: 35, leading: 0, bottom: 0, trailing: 0))
 
-                Button(action: {}) {
+                Button(action: signInAction) {
                     Spacer()
                     Text("Sign in")
                         .font(AppFont().body)
@@ -67,6 +67,11 @@ struct SignInView: View {
             .padding(EdgeInsets(top: 100, leading: 43, bottom: 0, trailing: 43))
        
         }
+        
+    }
+    
+    func signInAction() -> Void {
+        print("hello")
         
     }
 }
