@@ -140,7 +140,7 @@
 				2739DA1329C863E700184C1E /* Profile */,
 				27AC21E329CF530500E46E5B /* Main */,
 				27BD7A5A29C9608F00271EBC /* Home */,
-				27AC21E429CF531E00E46E5B /* AuthentificationViews */,
+				27AC21E429CF531E00E46E5B /* AuthenticationViews */,
 				27AC21E529CF533F00E46E5B /* Components */,
 				2739D9D029C85D5600184C1E /* Assets.xcassets */,
 				2739D9D229C85D5600184C1E /* Preview Content */,
@@ -238,13 +238,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		27AC21E429CF531E00E46E5B /* AuthentificationViews */ = {
+		27AC21E429CF531E00E46E5B /* AuthenticationViews */ = {
 			isa = PBXGroup;
 			children = (
 				2739DA2029C8647000184C1E /* SignInView.swift */,
 				2739DA1E29C8646800184C1E /* LoginView.swift */,
 			);
-			path = AuthentificationViews;
+			path = AuthenticationViews;
 			sourceTree = "<group>";
 		};
 		27AC21E529CF533F00E46E5B /* Components */ = {
