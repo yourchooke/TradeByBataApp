@@ -14,6 +14,15 @@ struct HomeView: View {
         
         
         VStack{
+            HStack {
+                Text("Latest")
+                    .bold()
+                Spacer()
+                Button(action: {}) {
+                    Text("View all")
+                        .foregroundColor(.gray)
+                }
+            } .padding()
             if let latestArray = viewModel.latest {
                 ScrollView {
                     HStack{      
@@ -27,10 +36,19 @@ struct HomeView: View {
                         }
                     }
                 }
-                
             } else {
                 Text("Loading...")
             }
+            
+            HStack {
+                Text("Flash Sale")
+                    .bold()
+                Spacer()
+                Button(action: {}) {
+                    Text("View all")
+                        .foregroundColor(.gray)
+                }
+            } .padding()
             
             if let flashSaleArray = viewModel.flashSale {
                 ScrollView {
