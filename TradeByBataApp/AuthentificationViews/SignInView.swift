@@ -19,7 +19,7 @@ struct SignInView: View {
                     .fontWeight(.semibold)
                     .fontSize(size: 30)
                 
-                GrayTextField(title: "First name", text: $name, isSecured: false)
+                GrayTextField(title: "First name", text: $name)
                     .padding(.init(top: 60, leading: 0, bottom: 0, trailing: 0))
                 GrayTextField(title: "Last name", text: $lastName)
                     .padding(.init(top: 35, leading: 0, bottom: 0, trailing: 0))

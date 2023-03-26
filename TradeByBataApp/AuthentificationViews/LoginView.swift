@@ -20,10 +20,10 @@ struct LoginView: View {
                     .fontSize(size: 30)
                     
                 
-                GrayTextField(title: "First name", text: $name, isSecured: false)
+                GrayTextField(title: "First name", text: $name)
                     .padding(.init(top: 60, leading: 0, bottom: 35, trailing: 0))
                 
-                GrayTextField(title: "Password", text: $password, isSecured: true)
+                GraySecuredTextField(title: "Password", text: $password, isSecured: true)
                 
                 
                 Spacer(minLength: 99)
