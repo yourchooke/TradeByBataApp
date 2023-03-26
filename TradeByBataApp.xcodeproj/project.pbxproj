@@ -49,6 +49,7 @@
 		27AC21E229CF17AD00E46E5B /* FlashSaleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC21E129CF17AD00E46E5B /* FlashSaleCard.swift */; };
 		27AC21ED29D0760400E46E5B /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC21EC29D0760400E46E5B /* Categories.swift */; };
 		27AC21EF29D09F3A00E46E5B /* GraySecuredTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC21EE29D09F3A00E46E5B /* GraySecuredTextField.swift */; };
+		27AC21F929D0BDEB00E46E5B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC21F829D0BDEB00E46E5B /* UserManager.swift */; };
 		27BD7A5929C9607700271EBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A5829C9607700271EBC /* HomeView.swift */; };
 		27BD7A5E29C9B4DF00271EBC /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A5D29C9B4DF00271EBC /* Goods.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		27AC21E129CF17AD00E46E5B /* FlashSaleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSaleCard.swift; sourceTree = "<group>"; };
 		27AC21EC29D0760400E46E5B /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		27AC21EE29D09F3A00E46E5B /* GraySecuredTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraySecuredTextField.swift; sourceTree = "<group>"; };
+		27AC21F829D0BDEB00E46E5B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		27BD7A5829C9607700271EBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		27BD7A5D29C9B4DF00271EBC /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				2739DA1129C863BE00184C1E /* NetworkManager.swift */,
+				27AC21F829D0BDEB00E46E5B /* UserManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				2739DA2129C8647000184C1E /* SignInView.swift in Sources */,
 				27AC21ED29D0760400E46E5B /* Categories.swift in Sources */,
 				2739DA2329C8648E00184C1E /* TabBarView.swift in Sources */,
+				27AC21F929D0BDEB00E46E5B /* UserManager.swift in Sources */,
 				2739DA1929C863E700184C1E /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
