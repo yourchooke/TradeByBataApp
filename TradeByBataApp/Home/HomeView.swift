@@ -9,12 +9,26 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
+    @State var searchText = ""
     
     var body: some View {
         
         
         NavigationStack {
             VStack{
+    
+                ZStack{
+                    RoundedRectangle(cornerRadius: 15)
+                        .foregroundColor(Color(red: 0.961, green: 0.965, blue: 0.969))
+                    TextField("What are you looking for?", text: $searchText)
+                        .font(AppFont().footnote)
+                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
+                    Image(systemName: "magnifyingglass")
+                        .padding(.init(top: 0, leading: 220, bottom: 0, trailing: 0))
+                }
+                    .frame(width: 262, height: 30)
+                    .padding(.top, 10)
+                
                 HStack {
                     Text("Latest")
                         .bold()
@@ -26,7 +40,7 @@ struct HomeView: View {
                     }
                 } .padding()
                 if let latestArray = viewModel.latest {
-                    ScrollView {
+                    ScrollView(.horizontal, showsIndicators: false) {
                         HStack{
                             ForEach(latestArray, id: \.name) {good in
                                 LatestCard(
@@ -40,6 +54,7 @@ struct HomeView: View {
                     }
                 } else {
                     Text("Loading...")
+                        .frame(height: 150)
                 }
                 
                 HStack {
@@ -54,7 +69,7 @@ struct HomeView: View {
                 } .padding()
                 
                 if let flashSaleArray = viewModel.flashSale {
-                    ScrollView {
+                    ScrollView(.horizontal, showsIndicators: false) {
                         HStack{
                             ForEach(flashSaleArray, id: \.name) {good in
                                 FlashSaleCard(
@@ -70,6 +85,7 @@ struct HomeView: View {
                     
                 } else {
                     Text("Loading...")
+                        .frame(height: 221)
                 }
             }.task {
                 await viewModel.fetchData()
@@ -96,8 +112,13 @@ struct HomeView: View {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Image(systemName: "line.3.horizontal")
                     }
+                    
                 }
+            
+            Spacer()
         }
+        
+       
     }
 }
 
