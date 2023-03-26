@@ -17,6 +17,7 @@ struct HomeView: View {
             HStack {
                 Text("Latest")
                     .bold()
+                    .fontStyle(style: .body)
                 Spacer()
                 Button(action: {}) {
                     Text("View all")
@@ -43,6 +44,7 @@ struct HomeView: View {
             HStack {
                 Text("Flash Sale")
                     .bold()
+                    .fontStyle(style: .body)
                 Spacer()
                 Button(action: {}) {
                     Text("View all")
