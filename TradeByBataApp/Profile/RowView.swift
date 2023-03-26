@@ -35,7 +35,7 @@ struct RowView_Previews: PreviewProvider {
     static var previews: some View {
         RowView(
             viewModel: ProfileViewModel(
-                user: User.getUsers()),
+                user: User.getUsers().first!),
             imageName: "arrow.triangle.2.circlepath",
             text: "Restore purchase",
             value: "111"

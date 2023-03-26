@@ -19,15 +19,24 @@ struct User: Decodable {
         "\(firstName)  \(lastName)"
     }
     
-    static func getUsers() -> User {
-        return User(
+    static func getUsers() -> [User] {
+        return [User(
             firstName: "Sadhi",
             lastName: "Adhi Pradana",
             email: "sadhi@mail.ru",
             photoUrl: "https://github.com/yourchooke/TradeByBataApp/blob/main/TradeByBataApp/Mocks/avatar.png?raw=true",
             password: "123",
             balance: 1593
-        )
+        ),
+                User(
+                    firstName: "Olga",
+                    lastName: "Yurchuk",
+                    email: "o.sazhenkova@gmail.com",
+                    photoUrl: "https://avatars.githubusercontent.com/u/105637240?v=4",
+                    password: "123",
+                    balance: 1593
+                )
+        ]
         
     }
 }

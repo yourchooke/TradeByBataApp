@@ -31,7 +31,7 @@ struct TabBarView: View {
                 .tabItem {
                     Image(systemName: "bubble.left")
                 }
-            ProfileView(viewModel: ProfileViewModel(user: User.getUsers()))
+            ProfileView(viewModel: ProfileViewModel(user: User.getUsers().first!))
                 .tabItem {
                     Image(systemName: "person")
                 }    
