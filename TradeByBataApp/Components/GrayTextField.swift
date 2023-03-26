@@ -19,7 +19,6 @@ struct GrayTextField: View {
                 .foregroundColor(Color(red: 0.91, green: 0.91, blue: 0.91))
                 .frame(height: 30)
             HStack{
-               
                     if !isSecured {
                         TextField(title, text: $text)
                     } else {
@@ -30,19 +29,12 @@ struct GrayTextField: View {
                                 .accentColor(.gray)
                         } .padding(.trailing, 15)
                     }
-                
-                    
-                
-
             }
             .foregroundColor(Color(red: 0.482, green: 0.482, blue: 0.482))
         }
         .font(AppFont().body)
         .multilineTextAlignment(.center)
-        
-        
     }
-    
 }
 
 struct GrayTextField_Previews: PreviewProvider {
