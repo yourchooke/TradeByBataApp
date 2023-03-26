@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct TabBarView: View {
+    init() {
+           UITabBar.appearance().backgroundColor = UIColor.white
+       }
     var body: some View {
+        
         TabView {
             
             HomeView(viewModel: HomeViewModel())
@@ -33,7 +37,7 @@ struct TabBarView: View {
                 }    
 
         }
-            .background(.white)
+       
             .cornerRadius(30)
             .ignoresSafeArea()
     } 

@@ -27,7 +27,7 @@ struct HomeView: View {
                         .padding(.init(top: 0, leading: 220, bottom: 0, trailing: 0))
                 }
                     .frame(width: 262, height: 30)
-                    .padding(.top, 10)
+                    .padding(.top, 30)
 // Categories
              Categories()
                 
