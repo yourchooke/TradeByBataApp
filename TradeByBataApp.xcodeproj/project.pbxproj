@@ -47,6 +47,7 @@
 		27AC21DE29CAEA3E00E46E5B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC21DD29CAEA3E00E46E5B /* HomeViewModel.swift */; };
 		27AC21E029CB2AB700E46E5B /* LatestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC21DF29CB2AB700E46E5B /* LatestCard.swift */; };
 		27AC21E229CF17AD00E46E5B /* FlashSaleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC21E129CF17AD00E46E5B /* FlashSaleCard.swift */; };
+		27AC21ED29D0760400E46E5B /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC21EC29D0760400E46E5B /* Categories.swift */; };
 		27BD7A5929C9607700271EBC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A5829C9607700271EBC /* HomeView.swift */; };
 		27BD7A5E29C9B4DF00271EBC /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD7A5D29C9B4DF00271EBC /* Goods.swift */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		27AC21DD29CAEA3E00E46E5B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		27AC21DF29CB2AB700E46E5B /* LatestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCard.swift; sourceTree = "<group>"; };
 		27AC21E129CF17AD00E46E5B /* FlashSaleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSaleCard.swift; sourceTree = "<group>"; };
+		27AC21EC29D0760400E46E5B /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		27BD7A5829C9607700271EBC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		27BD7A5D29C9B4DF00271EBC /* Goods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,6 +261,7 @@
 				27AC21DD29CAEA3E00E46E5B /* HomeViewModel.swift */,
 				27AC21DF29CB2AB700E46E5B /* LatestCard.swift */,
 				27AC21E129CF17AD00E46E5B /* FlashSaleCard.swift */,
+				27AC21EC29D0760400E46E5B /* Categories.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				2739DA1D29C8644800184C1E /* GrayTextField.swift in Sources */,
 				2739DA1F29C8646800184C1E /* LoginView.swift in Sources */,
 				2739DA2129C8647000184C1E /* SignInView.swift in Sources */,
+				27AC21ED29D0760400E46E5B /* Categories.swift in Sources */,
 				2739DA2329C8648E00184C1E /* TabBarView.swift in Sources */,
 				2739DA1929C863E700184C1E /* ProfileViewModel.swift in Sources */,
 			);

@@ -16,7 +16,7 @@ struct HomeView: View {
         
         NavigationStack {
             VStack{
-    
+// Search
                 ZStack{
                     RoundedRectangle(cornerRadius: 15)
                         .foregroundColor(Color(red: 0.961, green: 0.965, blue: 0.969))
@@ -28,7 +28,10 @@ struct HomeView: View {
                 }
                     .frame(width: 262, height: 30)
                     .padding(.top, 10)
+// Categories
+             Categories()
                 
+// Latest
                 HStack {
                     Text("Latest")
                         .bold()
@@ -56,7 +59,7 @@ struct HomeView: View {
                     Text("Loading...")
                         .frame(height: 150)
                 }
-                
+// Flash sale
                 HStack {
                     Text("Flash Sale")
                         .bold()
@@ -91,6 +94,7 @@ struct HomeView: View {
                 await viewModel.fetchData()
                 print("await fetch data")
             }
+// Navigation bar
                 .navigationTitle("Trade by bata")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
