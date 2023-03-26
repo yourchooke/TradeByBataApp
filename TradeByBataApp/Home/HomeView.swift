@@ -13,7 +13,7 @@ struct HomeView: View {
     var body: some View {
         
         
-        NavigationView {
+        NavigationStack {
             VStack{
                 HStack {
                     Text("Latest")
@@ -77,6 +77,26 @@ struct HomeView: View {
             }
                 .navigationTitle("Trade by bata")
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        VStack {
+                            ProfilePhoto(imageURL: nil, imageSize: CGSize(width: 20, height: 20))
+                            Button(action: {}) {
+                                HStack {
+                                    Text("Location")
+                                        .fontStyle(style: .footnote)
+                                    Image(systemName: "chevron.down")
+                                        .resizable()
+                                        .frame(width: 8, height: 4)
+                                }
+                            }
+                            .foregroundColor(.black)
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Image(systemName: "line.3.horizontal")
+                    }
+                }
         }
     }
 }
