@@ -37,7 +37,7 @@ struct TabBarView: View {
                 }    
 
         }
-       
+            .navigationBarBackButtonHidden()
             .cornerRadius(30)
             .ignoresSafeArea()
     } 

@@ -13,7 +13,7 @@ struct LoginView: View {
     @State private var password = ""
     
     var body: some View {
-     //   NavigationView {
+
             VStack{
                 Text("Welcome back")
                     .fontWeight(.semibold)
