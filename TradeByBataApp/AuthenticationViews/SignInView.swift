@@ -14,6 +14,7 @@ struct SignInView: View {
     @State private var email = ""
     @State private var showingAlert = false
     @State private var showingValidationAlert = false
+    @State private var willMoveToNextScreen = false
         
     var body: some View {
         NavigationView {
@@ -47,6 +48,7 @@ struct SignInView: View {
                 .buttonStyle(.borderedProminent)
                 .tint(Color(red: 0.306, green: 0.333, blue: 0.843))
                 .padding(.init(top: 35, leading: 0, bottom: 0, trailing: 0))
+                .navigate(to: TabBarView(), when: $willMoveToNextScreen)
 // Log in
                 HStack {
                     Text("Already have an account?")
@@ -85,15 +87,16 @@ struct SignInView: View {
         let currentEmail = $email.wrappedValue
         if !textFieldValidatorEmail(currentEmail){
             showingValidationAlert.toggle()
-        }
-        let result = StorageManager.shared.checkEmail(email: currentEmail)
-        if !result {
-            showingAlert.toggle()
         } else {
-            let user = UserManager(value: [name, lastName, email, "", "111", 0, true])
-            StorageManager.shared.save(user)
+            let result = StorageManager.shared.checkEmail(email: currentEmail)
+            if !result {
+                showingAlert.toggle()
+            } else {
+                let user = UserManager(value: [name, lastName, email, "", "111", 0, true])
+                StorageManager.shared.save(user)
+                willMoveToNextScreen.toggle()
+            }
         }
-        
     }
     
     func textFieldValidatorEmail(_ string: String) -> Bool {
@@ -104,6 +107,27 @@ struct SignInView: View {
         //let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
         return emailPredicate.evaluate(with: string)
+    }
+}
+
+extension View {
+    func navigate<NewView: View>(to view: NewView, when binding: Binding<Bool>) -> some View {
+//        NavigationView {
+            ZStack {
+                self
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+                NavigationLink(
+                    destination: view
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true),
+                    isActive: binding
+                ) {
+                    EmptyView()
+                }
+//            }
+        }
+        .navigationViewStyle(.stack)
     }
 }
 
