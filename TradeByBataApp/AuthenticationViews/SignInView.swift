@@ -12,7 +12,7 @@ struct SignInView: View {
     @State private var name = ""
     @State private var lastName = ""
     @State private var email = ""
-
+    @State private var showingAlert = false
         
     var body: some View {
         NavigationView {
@@ -28,18 +28,22 @@ struct SignInView: View {
                 GrayTextField(title: "Email", text: $email)
                     .textCase(.lowercase)
                     .padding(.init(top: 35, leading: 0, bottom: 0, trailing: 0))
-
+// Sign in
                 Button(action: signInAction) {
                     Spacer()
                     Text("Sign in")
                         .font(AppFont().body)
                         .bold()
                     Spacer()
-                } .frame(height: 46)
+                }
+                .alert("User with this email exist!", isPresented: $showingAlert) {
+                    Button("OK", role: .cancel) { showingAlert.toggle()}
+                       }
+                .frame(height: 46)
                 .buttonStyle(.borderedProminent)
                 .tint(Color(red: 0.306, green: 0.333, blue: 0.843))
                 .padding(.init(top: 35, leading: 0, bottom: 0, trailing: 0))
-                
+// Log in
                 HStack {
                     Text("Already have an account?")
                     NavigationLink("Log in", destination: LoginView())
@@ -76,7 +80,12 @@ struct SignInView: View {
     func signInAction() -> Void {
         let currentEmail = $email.wrappedValue
         let result = StorageManager.shared.checkEmail(email: currentEmail)
-        print(result)
+        if !result {
+            showingAlert.toggle()
+        } else {
+            let user = UserManager(value: [name, lastName, email, "", "111", 0, true])
+            StorageManager.shared.save(user)
+        }
         
     }
 }
