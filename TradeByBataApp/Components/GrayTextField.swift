@@ -18,6 +18,8 @@ struct GrayTextField: View {
                 .foregroundColor(Color(red: 0.91, green: 0.91, blue: 0.91))
                 .frame(height: 30)
             TextField(title, text: $text)
+                .autocapitalization(.none)
+                .textCase(.lowercase)
                 .foregroundColor(Color(red: 0.482, green: 0.482, blue: 0.482))
         }
         .font(AppFont().body)

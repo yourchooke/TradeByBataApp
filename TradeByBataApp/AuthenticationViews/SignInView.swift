@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct SignInView: View {
     @State private var name = ""
     @State private var lastName = ""
     @State private var email = ""
+
         
     var body: some View {
         NavigationView {
@@ -24,6 +26,7 @@ struct SignInView: View {
                 GrayTextField(title: "Last name", text: $lastName)
                     .padding(.init(top: 35, leading: 0, bottom: 0, trailing: 0))
                 GrayTextField(title: "Email", text: $email)
+                    .textCase(.lowercase)
                     .padding(.init(top: 35, leading: 0, bottom: 0, trailing: 0))
 
                 Button(action: signInAction) {
@@ -71,7 +74,9 @@ struct SignInView: View {
     }
     
     func signInAction() -> Void {
-        print("hello")
+        let currentEmail = $email.wrappedValue
+        let result = StorageManager.shared.checkEmail(email: currentEmail)
+        print(result)
         
     }
 }
