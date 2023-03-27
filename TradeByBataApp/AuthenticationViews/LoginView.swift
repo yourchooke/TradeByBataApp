@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct LoginView: View {
-    
+    @EnvironmentObject private var userManager: UserManager
     @State private var name = ""
     @State private var password = ""
     @State private var showAlert = false
+    @State private var willMoveToNextScreen = false
     
     var body: some View {
 
@@ -39,7 +40,7 @@ struct LoginView: View {
                 } .alert("There is no such user", isPresented: $showAlert) {
                     Button("OK", role: .cancel) {showAlert.toggle()}
                        }
-
+                .navigate(to: TabBarView(), when: $willMoveToNextScreen)
                 .buttonStyle(.borderedProminent)
                 .tint(Color(red: 0.306, green: 0.333, blue: 0.843))
                 
@@ -57,7 +58,8 @@ struct LoginView: View {
         let currentPass = $password.wrappedValue
         if !StorageManager.shared.checkLogin(name: currentName, pass: currentPass){
             let user = StorageManager.shared.getUser(name: currentName, pass: currentPass)
-            print(user.email)
+            StorageManager.shared.setLogged(user: user)
+            willMoveToNextScreen.toggle()
         } else {showAlert.toggle()}
     }
 }

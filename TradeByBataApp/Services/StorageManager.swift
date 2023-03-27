@@ -24,8 +24,8 @@ class StorageManager {
         return realm.objects(UserManager.self).filter("isLogged = %@", true).isEmpty
     }
     
-    func getLogged() -> UserManager {
-        return realm.objects(UserManager.self).filter("isLogged = %@", true).first!
+    func getLogged() -> UserManager? {
+        return realm.objects(UserManager.self).filter("isLogged = %@", true).first
     }
     
     func checkEmail(email: String) -> Bool {
@@ -38,6 +38,12 @@ class StorageManager {
     
     func getUser(name: String, pass: String) -> UserManager {
         return realm.objects(UserManager.self).filter("firstName = %@ AND password == %@",name,pass).first! 
+    }
+    
+    func setLogged(user: UserManager) {
+        try! realm.write {
+            user.isLogged.toggle()
+        }
     }
     
     func setPreconditions() {

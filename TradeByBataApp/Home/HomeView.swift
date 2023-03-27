@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+
     @ObservedObject var viewModel: HomeViewModel
     @State var searchText = ""
     
@@ -100,7 +101,7 @@ struct HomeView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         VStack {
-                            ProfilePhoto(imageURL: nil, imageSize: CGSize(width: 20, height: 20))
+                            ProfilePhoto(imageURL: viewModel.photoURL, imageSize: CGSize(width: 20, height: 20))
                             Button(action: {}) {
                                 HStack {
                                     Text("Location")
@@ -129,5 +130,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(viewModel: HomeViewModel.init())
+            .environmentObject(StorageManager.shared.getLogged() ?? UserManager())
     }
 }

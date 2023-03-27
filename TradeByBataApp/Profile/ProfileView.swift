@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ProfileView: View {
-    @EnvironmentObject private var user: UserManager
     var viewModel: ProfileViewModel
     var body: some View {
         NavigationStack {
             VStack{
                     Text("Profile")
                         .fontWeight(.semibold)
-                    ProfilePhoto(imageURL: viewModel.photoURL, imageSize: CGSize(width: 50, height: 50))
+                ProfilePhoto(imageURL: viewModel.photoURL, imageSize: CGSize(width: 50, height: 50))
                     Button(action: {}) {
                         Text("Change photo")
                             .font(AppFont().footnote)
@@ -101,8 +101,4 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarView()
-    }
-}
+

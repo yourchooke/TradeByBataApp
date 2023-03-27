@@ -12,7 +12,7 @@ protocol ProfileViewModelProtocol {
     var photoURL: String { get }
     var balance: String { get }
     
-    init(user: User)
+    init(user: UserManager)
 }
 
 class ProfileViewModel: ProfileViewModelProtocol {
@@ -25,13 +25,13 @@ class ProfileViewModel: ProfileViewModelProtocol {
     }
     
     var balance: String {
-        guard let balance = user.balance else { return "0" }
+        let balance = user.balance
         return "$ \(balance)"
     }
     
-    private let user: User
+    private let user: UserManager
     
-    required init(user: User) {
-        self.user = user
+    required init(user: UserManager) {
+        self.user = StorageManager.shared.getLogged()!
     }
 }

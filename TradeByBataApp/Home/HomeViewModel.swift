@@ -17,6 +17,7 @@ class HomeViewModel: HomeViewModelProtocol, ObservableObject {
     
     @Published var latest: [Good]?
     @Published var flashSale: [Good]?
+    var photoURL: String? = StorageManager.shared.getLogged()?.photoUrl
     
     func fetchData() async {
         self.latest = nil

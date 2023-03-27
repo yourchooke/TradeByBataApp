@@ -16,7 +16,7 @@ struct ContentView: View {
                 }
         } else {
             TabBarView()
-                .environmentObject(StorageManager.shared.getLogged())
+                .environmentObject(StorageManager.shared.getLogged() ?? UserManager())
         }
     }
 }
