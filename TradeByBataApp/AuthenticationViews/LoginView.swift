@@ -11,6 +11,7 @@ struct LoginView: View {
     
     @State private var name = ""
     @State private var password = ""
+    @State private var showAlert = false
     
     var body: some View {
 
@@ -35,7 +36,9 @@ struct LoginView: View {
                             .tint(.white)
                             .bold()
                         Spacer()
-                }
+                } .alert("There is no such user", isPresented: $showAlert) {
+                    Button("OK", role: .cancel) {showAlert.toggle()}
+                       }
 
                 .buttonStyle(.borderedProminent)
                 .tint(Color(red: 0.306, green: 0.333, blue: 0.843))
@@ -53,8 +56,9 @@ struct LoginView: View {
         let currentName = $name.wrappedValue
         let currentPass = $password.wrappedValue
         if !StorageManager.shared.checkLogin(name: currentName, pass: currentPass){
-            
-        } else {print("there is no such user")}
+            let user = StorageManager.shared.getUser(name: currentName, pass: currentPass)
+            print(user.email)
+        } else {showAlert.toggle()}
     }
 }
 
