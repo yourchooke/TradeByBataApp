@@ -24,6 +24,13 @@ class StorageManager {
         return realm.objects(UserManager.self).filter("email = %@", email).isEmpty
     }
     
+    func checkLogin(name: String, pass: String) -> Bool {
+        return realm.objects(UserManager.self).filter("firstName = %@ AND password == %@",name,pass).isEmpty
+    }
+    
+    func getUser(name: String, pass: String) -> UserManager {
+        return realm.objects(UserManager.self).filter("firstName = %@ AND password == %@",name,pass).first! 
+    }
     
     func setPreconditions() {
         if realm.isEmpty {

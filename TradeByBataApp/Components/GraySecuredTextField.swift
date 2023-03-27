@@ -20,9 +20,13 @@ struct GraySecuredTextField: View {
             HStack{
                     if !isSecured {
                         TextField(title, text: $text)
+                            .autocapitalization(.none)
+                            .textCase(.lowercase)
                             .padding(.trailing, -45)
                     } else {
                         SecureField(title, text: $text)
+                            .autocapitalization(.none)
+                            .textCase(.lowercase)
                             .padding(.trailing, -45)
                     }
                 Button(action: { isSecured.toggle() }) {

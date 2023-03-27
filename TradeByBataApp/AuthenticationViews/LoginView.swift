@@ -28,15 +28,13 @@ struct LoginView: View {
                 
                 Spacer(minLength: 99)
                 
-                    Button(action: {}) {
-                        NavigationLink(destination: TabBarView()) {
+                    Button(action: loginAction) {
                         Spacer()
                         Text("Login")
                             .font(AppFont().body)
                             .tint(.white)
                             .bold()
                         Spacer()
-                    }
                 }
 
                 .buttonStyle(.borderedProminent)
@@ -52,7 +50,11 @@ struct LoginView: View {
     
     
     func loginAction() {
-       
+        let currentName = $name.wrappedValue
+        let currentPass = $password.wrappedValue
+        if !StorageManager.shared.checkLogin(name: currentName, pass: currentPass){
+            
+        } else {print("there is no such user")}
     }
 }
 
