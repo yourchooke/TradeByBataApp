@@ -28,6 +28,7 @@ struct RowView: View {
         }
             .frame(height: 37)
             .font(AppFont().body)
+        
     }
 }
 
