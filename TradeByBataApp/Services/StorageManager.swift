@@ -20,6 +20,14 @@ class StorageManager {
         }
     }
     
+    func checkLogged() -> Bool {
+        return realm.objects(UserManager.self).filter("isLogged = %@", true).isEmpty
+    }
+    
+    func getLogged() -> UserManager {
+        return realm.objects(UserManager.self).filter("isLogged = %@", true).first!
+    }
+    
     func checkEmail(email: String) -> Bool {
         return realm.objects(UserManager.self).filter("email = %@", email).isEmpty
     }
@@ -39,7 +47,8 @@ class StorageManager {
                                     "sadhi@mail.ru",
                                     "https://github.com/yourchooke/TradeByBataApp/blob/main/TradeByBataApp/Mocks/avatar.png?raw=true",
                                     "123",
-                                    1593
+                                    1593,
+                                    false
                                    ])
             save(user1)
             let user2 = UserManager(value: ["Olga",
@@ -47,7 +56,8 @@ class StorageManager {
                                     "o.sazhenkova@gmail.com",
                                     "https://avatars.githubusercontent.com/u/105637240?v=4",
                                     "123",
-                                    1593
+                                    1593,
+                                    false
                                    ])
             save(user2)
         }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @EnvironmentObject private var user: UserManager
+    
     init() {
            UITabBar.appearance().backgroundColor = UIColor.white
        }
@@ -34,7 +36,7 @@ struct TabBarView: View {
             ProfileView(viewModel: ProfileViewModel(user: User.getUsers().first!))
                 .tabItem {
                     Image(systemName: "person")
-                }    
+                }
 
         }
             .navigationBarBackButtonHidden()

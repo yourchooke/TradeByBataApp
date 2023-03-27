@@ -9,11 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        SignInView()
-            .task {
-                StorageManager.shared.setPreconditions()
-            }
-        .padding()
+        if StorageManager.shared.checkLogged() {
+            SignInView()
+                .task {
+                    StorageManager.shared.setPreconditions()
+                }
+        } else {
+            TabBarView()
+                .environmentObject(StorageManager.shared.getLogged())
+        }
     }
 }
 
